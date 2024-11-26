@@ -1,0 +1,15 @@
+_format_version: "3.0"
+_transform: true
+
+# SERVICES
+services:
+  # OLLAMA
+  - host: host.docker.internal
+    name: ollama
+    port: 11434
+    protocol: http
+    routes:
+      - name: api
+        paths:
+          - /
+        strip_path: false

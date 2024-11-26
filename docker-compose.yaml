@@ -1,0 +1,11 @@
+services:
+  api-gateway:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    ports:
+      - "8080:8000"
+      - "4010:3333"
+      - "9010:9669"
+    environment:
+      KONG_DECLARATIVE_CONFIG: /kong/declarative/kong.yml
