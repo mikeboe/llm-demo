@@ -1,6 +1,6 @@
 FROM kong/kong-gateway:3.8.0.0 as base 
 
-COPY ./kong.yml /kong/declarative/kong.yml
+COPY ./kong.yaml /kong/declarative/kong.yaml
 
 ENV KONG_DATABASE=off
 ENV KONG_LICENSE_DATA=

@@ -8,4 +8,4 @@ services:
       - "4010:3333"
       - "9010:9669"
     environment:
-      KONG_DECLARATIVE_CONFIG: /kong/declarative/kong.yml
+      KONG_DECLARATIVE_CONFIG: /kong/declarative/kong.yaml

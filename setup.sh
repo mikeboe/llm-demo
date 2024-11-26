@@ -1,10 +1,12 @@
 #!/bin/bash
-
 # Install Ollama 
 
 curl -fsSL https://ollama.com/install.sh | sudo sh
 
-curl -sSL https://get.docker.com/ | sudo sh
+# Compose
+sudo apt install docker-compose
+
+ollama run 
 
 docker compose up -d
 
