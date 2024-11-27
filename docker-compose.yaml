@@ -9,3 +9,19 @@ services:
       - "9010:9669"
     environment:
       KONG_DECLARATIVE_CONFIG: /kong/declarative/kong.yaml
+  ollama:
+    image: ollama/ollama
+    restart: always
+    ports:
+      - "11434:11434"
+    environment:
+      - "OLLAMA_HOST": "0.0.0.0"
+    volumes:
+      - "./ollama:/root/.ollama"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: ["gpu"]

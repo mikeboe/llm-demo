@@ -4,7 +4,7 @@ _transform: true
 # SERVICES
 services:
   # OLLAMA
-  - host: host.docker.internal
+  - host: ollama
     name: ollama
     port: 11434
     protocol: http
